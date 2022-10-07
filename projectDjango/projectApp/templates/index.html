@@ -1,0 +1,21 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Библиотека</h1>
+
+  <p>Добро пожаловать на <em>Сайт локальной библиотеки</em>. Вы можете посмотреть информацию о доступных книгах и забронировать их.
+    Перейдя в личный кабинет, предварительно выполнив авторизацию, вы можете просмотреть уже взятые вами книги.</p>
+
+<h2>Информация:</h2>
+
+  <p>В библиотека находится:</p>
+  <ul>
+    <li><strong>Книги:</strong> {{ num_books }}</li>
+    <li><strong>Копии:</strong> {{ num_instances }}</li>
+    <li><strong>Доступные копии:</strong> {{ num_instances_available }}</li>
+    <li><strong>Авторы:</strong> {{ num_authors }}</li>
+  </ul>
+
+
+<p>Вы посетили эту страницу {{ num_visits }}{% if num_visits == 1 %} раз{% else %} раз{% endif %}.</p>
+{% endblock %}
